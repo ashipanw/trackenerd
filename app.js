@@ -7,7 +7,7 @@ const express = require('express')
   , hike = require('./routes/hike')
   , http = require('http')
   , path = require('path')
-  , mysql = require('mysql')
+  , mysql = require('mysql2')
   , async = require('async')
   , bodyParser = require('body-parser')
   , methodOverride = require('method-override')
@@ -46,7 +46,7 @@ if (process.env.NODE_ENV === 'production') {
 
 function init() {
   app.get('/', routes.index);
-  app.get('/users', user.list);
+  //app.get('/users', user.list);
   app.get('/hikes', hike.index);
   app.post('/add_hike', hike.add_hike);
 
