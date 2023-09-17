@@ -38,10 +38,10 @@ if (process.env.NODE_ENV === 'production') {
   console.log('Attempting to create connection to development database');
   // TODO: Place local mysql connection information here. You need to have mysql running locally on your machine for this example to work
   app.set('connection', mysql.createConnection({
-    host: '127.0.0.1',
-    user: '',
+    host: 'localhost',
+    user: 'root',
     port: 3306,
-    password: ''}));
+    password: 'password'}));
 }
 
 function init() {
